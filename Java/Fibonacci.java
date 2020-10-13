@@ -23,6 +23,17 @@ public class Fibonacci {
         }   
     
     }
+    
+    static void fibUsingRecursion( int n){
+     if (n<0) 
+        System.out.print("Incorrect input") 
+    else if(n==0) 
+        return 0;
+    else if (n==1)
+        return 1;
+    else 
+        return fibUsingRecursion(n-1)+fibUsingRecursion(n-2); 
+    }
 
     public static void main(String[] args) {
 
@@ -33,9 +44,7 @@ public class Fibonacci {
         int n = in.nextInt();
 
         fibUsingLoop(n) ;
-
-        /* Write a function to print fibonacci series using recursion */
-        // fibUsingRecursion(n) ;
+        fibUsingRecursion(n) ;
 
         
     }
