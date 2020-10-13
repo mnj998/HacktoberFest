@@ -44,9 +44,7 @@ public:
         if( !top )
             return false;
         cout << "Popped: " << top->data << endl;
-        Node* nodeToBeDeleted = top;
         top = top->prev;
-        delete nodeToBeDeleted;
         return true;
     }
 
