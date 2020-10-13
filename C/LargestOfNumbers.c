@@ -7,8 +7,8 @@ int largestOfTwo( int num1, int num2 ) {
 
 int largestOfThree( int num1, int num2, int num3 ) {
     // Complete the function
-   
-    return largestOfTwo( largestOfTwo( num1, num2), num3 ));
+   return num1>num2 ? (num1>num3 ? num1 : num3) : (num2>num3 ? num2 : num3);
+    //return largestOfTwo( largestOfTwo( num1, num2), num3 ));
 
 }
 
