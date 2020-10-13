@@ -7,9 +7,13 @@ public class LargestOfNumbers {
         return num2;
     }
 
-    static int largestOfThree( int num1, int num2, int num3 ) {
+    static int largestOfThree( int num1, int num2, int num3) {
         // Complete the function
-        return 0;
+        int temp=num1>num2?num1:num2;
+        int result=num3>temp?num3:temp;
+        
+        
+        return result;
     }
 
 
@@ -26,7 +30,7 @@ public class LargestOfNumbers {
 
         /* Please create below functions to find the largest among the numbers */
 
-        // System.out.println( "Largest among n1, n2, n3 : "+largestOfThree( n1, n2, n3 ) ) ;
+         System.out.println( "Largest among n1, n2, n3 : "+largestOfThree( n1, n2, n3 ) ) ;
         // System.out.println( "Largest among n1, n2, n3, n4 : "+largestOfFour( n1, n2, n3, n4 ) ) ;
         // System.out.println( "Largest among n1, n2, n3, n4, n5 : "+largestOfFive( n1, n2, n3, n4, n5 ) ) ;
         
