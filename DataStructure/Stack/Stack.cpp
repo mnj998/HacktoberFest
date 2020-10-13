@@ -1,12 +1,10 @@
 /*
 Note: 
-
 Keep the usage of in-built function to the minimum
 Add/Optimize  features
 Please follow best coding practices
 Add comments if necessary
 And make the Code Bug free
-
 */
 
 #include<iostream>
@@ -44,7 +42,9 @@ public:
         if( !top )
             return false;
         cout << "Popped: " << top->data << endl;
+        Node* nodeToBeDeleted = top;
         top = top->prev;
+        delete nodeToBeDeleted;
         return true;
     }
 
