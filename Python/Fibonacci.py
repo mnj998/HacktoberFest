@@ -1,16 +1,14 @@
 # Solve the bugs if there are any
 def fibUsingLoop(n):
 
-    first = 0
-    second = 1
-    third = first + second
-
-    for i in range(n):
-        print(first)
-
-        first = second
-        second = third
-        third = first + second
+    if n<0: 
+        print("Incorrect input") 
+    elif n==0: 
+        return 0 
+    elif n==1: 
+        return 1
+    else: 
+        return Fibonacci(n-1)+Fibonacci(n-2)
 
 
 n = input("How many numbers from fib series? : ")
