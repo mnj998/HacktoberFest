@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std ;
 
-void fibUsingLoop( int n ) {
+int fibUsingLoop( int n ) {
 
-    // Solve the bugs if there are any 
+    // Solve the bugs 
 
     int first = 0; 
     int second = 1;
@@ -20,18 +20,26 @@ void fibUsingLoop( int n ) {
     }
     
 }
+int fibUsingRecursion(int x ){
+    if((x==1)||(x==0)) {
+      return(x);
+   }else {
+      return(fibUsingRecursion(x-1)+fibUsingRecursion(x-2));
+   }
+}
 
 int main() {
 
-    int n ;
+    int n ,i=0;
 
     cout << "How many numbers from fib series? : ";
     cin >> n ;
 
-    fibUsingLoop(n) ;
-
-    /* Write a function to print fibonacci series using recursion */
-    // fibUsingRecursion(n) ;
-
+    cout<<"fibonacci using loop = "<<fibUsingLoop(n)<<endl ;
+    cout<<"fibonacci using recursion = ";
+    while(i <=n) {
+      cout << " " << fibUsingRecursion(i);
+      i++;
+    }
     return 0;
 }
