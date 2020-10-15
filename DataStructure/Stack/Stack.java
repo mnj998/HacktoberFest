@@ -1,4 +1,7 @@
+package DataStructure.Stack;
+
 /*
+
 Note:
 
 Keep the usage of in-built function to the minimum
@@ -9,9 +12,9 @@ And make the Code Bug free
 
 */
 
-package Java;
 
-public class stack {
+
+public class Stack {
     /* Java program to implement basic stack 
 operations */
 	static final int MAX = 1000; 
@@ -22,7 +25,7 @@ operations */
 	{ 
 		return (top < 0); 
 	} 
-	stack() 
+	Stack() 
 	{ 
 		top = -1; 
 	} 
@@ -80,7 +83,7 @@ operations */
 class Main { 
 	public static void main(String args[]) 
 	{ 
-		stack s = new stack(); 
+		Stack s = new Stack(); 
 		s.print();
 		s.push(10); 
 		s.print();
@@ -90,7 +93,3 @@ class Main {
 		s.print();
 	} 
 } 
-
-
-
-//Please refer Stack.cpp program and code in java
