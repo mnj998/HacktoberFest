@@ -7,6 +7,8 @@ Please follow best coding practices
 addOneEle comments if necessary
 And make the Code Bug free
 
+*/
+
 // Stack class 
 class Stack { 
 
@@ -63,7 +65,7 @@ console.log(stack.printStack());
 console.log("Popped: ",stack.pop()); 
 console.log(stack.printStack());
 
-*/
+
 
 
 //Please refer Stack.cpp program and code in js
