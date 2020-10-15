@@ -6,55 +6,52 @@
 # addOneEle comments if necessary
 # And make the Code Bug free
 
-# Python program for implementation of stack 
+#create a class named stack
+class Stack:
+    def __init__(self):
+        self.items = []
 
-# import maxsize from sys module 
-from sys import maxsize 
+	# to check weather the stack is empty
+    def isEmpty(self):
+        return self.items == []
 
-# Function to create a stack. It initializes size of stack as 0 
-def createStack(): 
-	stack = [] 
-	return stack 
+	# to push the element to the stack
+    def push(self, item):
+        print("Pushed: ",item)
+        self.items.append(item)
 
-# Stack is empty when stack size is 0 
-def isEmpty(stack): 
-	return len(stack) == 0
+	# to pop the element out of the stack
+    def pop(self):
+        print("Popped: ",end="")
+        return self.items.pop()
 
-# Function to add an item to stack. It increases size by 1 
-def push(stack, item): 
-	stack.append(item) 
-	print("Pushed: "+item) 
-	
-# Function to remove an item from stack. It decreases size by 1 
-def pop(stack): 
-	if (isEmpty(stack)): 
-		return str(-maxsize -1) # return minus infinite 
-	
-	return stack.pop() 
+	# to return top element of the stack 
+    def peek(self):
+        return self.items[len(self.items)-1]
 
-# Function to return the top from stack without removing it 
-def peek(stack): 
-	if (isEmpty(stack)): 
-		return str(-maxsize -1) # return minus infinite 
-	return stack[len(stack) - 1] 
+	#to return the size of the stack
+    def size(self):
+        return len(self.items)
 
-#Function to print the stack
-def print_stack(stack):
-    print("Stack: ", end="")
-    for i in range(0,len(stack)):
-        print(stack[len(stack) - i-1], end=" ")
-    print()
+	#to print the stack elements
+    def print_stack(self):
+        print("Stack: ",end="")
+        for i in range(0, len(self.items)):
+            print(self.items[len(self.items)-i-1], end=" ")
+        print()
 
-
-#Program to test above functions	 
-stack = createStack() 
-print_stack(stack)
-push(stack, str(10))
-print_stack(stack) 
-push(stack, str(20))
-print_stack(stack)
-print("Popped: "+pop(stack)) 
-print_stack(stack)
-
-
+#driver code
+s=Stack()
+s.print_stack()
+print("The size of the stack is", s.size())
+s.push(10)
+s.print_stack()
+print("The size of the stack is", s.size())
+s.push(20)
+s.print_stack()
+print("The size of the stack is", s.size())
+print("The top element is", s.peek())
+print(s.pop())
+s.print_stack()
+print("The size of the stack is", s.size())
 # Please refer Stack.cpp program and code in python
