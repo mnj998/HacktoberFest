@@ -1,12 +1,3 @@
-# Note: 
-
-# Keep the usage of in-built function to the minimum
-# Add/Optimize  features
-# Please follow best coding practices
-# Add comments if necessary
-# And make the Code Bug free
-
-
 class Node:
     def __init__( self, num ):
         self.data = num
@@ -44,12 +35,15 @@ class LinkedList:
         return temp
 
     def print( self ) :
-        temp = self.root
-        print( "LinkedList Values: ", end="" )
-        while( temp != None ):
-            print( temp.data , end=" ")
-            temp = temp.next
-        print()
+        if(self.root!=None):
+            temp = self.root
+            print( "LinkedList Values: ", end="" )
+            while( temp != None ):
+                print( temp.data , end=" ")
+                temp = temp.next
+            print()
+        else:
+            print("Linked List is cleared")
 
     # Test and Complete the following methods
 
@@ -65,8 +59,8 @@ class LinkedList:
         pass
 
     def clear( self ) :
-        # Delete all the elements from the list
-        pass
+        self.root=None
+        self.size=0
 
     def contains( self, value ) :
         # To check if element exist
@@ -87,4 +81,7 @@ ll.print()
 
 ind = 1 
 node = ll.elementAt( ind )
-print( "Element at index" , ind , ":" , node.data )       
+print( "Element at index" , ind , ":" , node.data )
+
+ll.clear()
+ll.print()
