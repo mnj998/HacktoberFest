@@ -7,6 +7,13 @@ function largestOfThree(num1, num2, num3) {
   return largestOfTwo( largestOfTwo( num1, num2), num3 )
 }
 
+function largestOfFour(num1,num2, num3,num4){
+  return largestOfThree(largestOfTwo( num1, num2) ,num3, num4);
+}
+
+function largestOfFive(num1,num2, num3, num4,num5 ){
+  return largestOfFour(largestOfTwo(num1,num2),num3,num4,num5);
+}
 var n1 = 50,
   n2 = 400,
   n3 = -10,
@@ -17,8 +24,8 @@ console.log("Largest among n1, n2 : ", largestOfTwo(n1, n2));
 
 /* Please create below functions to find the largest among the numbers */
 
-// console.log( "Largest among n1, n2, n3 : ", largestOfThree( n1, n2, n3 ) ) ;
-// console.log( "Largest among n1, n2, n3, n4 : ", largestOfFour( n1, n2, n3, n4 ) ) ;
-// console.log( "Largest among n1, n2, n3, n4, n5 : ", largestOfFive( n1, n2, n3, n4, n5 ) ) ;
+ console.log( "Largest among n1, n2, n3 : ", largestOfThree( n1, n2, n3 ) ) ;
+ console.log( "Largest among n1, n2, n3, n4 : ", largestOfFour( n1, n2, n3, n4 ) ) ;
+ console.log( "Largest among n1, n2, n3, n4, n5 : ", largestOfFive( n1, n2, n3, n4, n5 ) ) ;
 
 //Run this code in Browser console

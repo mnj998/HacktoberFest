@@ -19,6 +19,24 @@ void fibUsingLoop( int n ) {
     }
     
 }
+int fibUsingRecursion(int n)
+{
+  if(n<0){
+     printf("incorrect answer:");
+     return -1;
+  }
+ else if(n==0){
+
+    return 0;
+  }
+  else if(n==1){
+   return 1;
+  }
+  else{
+    return fibUsingRecursion(n-1)+fibUsingRecursion(n-2);
+  }
+  
+}
 
 void main() {
 
@@ -28,9 +46,10 @@ void main() {
     scanf("%d", &n );
 
     fibUsingLoop(n) ;
+    printf("%d", fibUsingRecursion(n)) ;
 
-    /* Write a function to print fibonacci series using recursion */
-    // fibUsingRecursion(n) ;
+
+   
 
     
 }
