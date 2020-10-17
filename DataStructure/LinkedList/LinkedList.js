@@ -1,11 +1,3 @@
-// Note: 
-
-// Keep the usage of in-built function to the minimum
-// Add/Optimize  features
-// Please follow best coding practices
-// Add comments if necessary
-// And make the Code Bug free
-
 
 class Node {
     constructor( num ) {
@@ -38,7 +30,7 @@ class LinkedList {
         //      Index:      0     1     2     3
         
         let length = this.size-1
-        const temp = this.root
+        let temp = this.root
 
         while( index != length ) {
             temp = temp.next
@@ -64,18 +56,55 @@ class LinkedList {
     }
 
     reverse() {
-        // Reverse the content of the list
+        let prev,next;
+        let current = this.root ;
+        while(current){ 
+            next = current.next
+            current.next = prev 
+            prev = current 
+            current = next
+            }
+        this.root = prev;
     }
     sort() {
-        // sort elements of list ( ascending )
+        let current = this.root;  
+        let index,temp; 
+          
+        if(!this.root)  
+            return;  
+        else{
+            while(current){ 
+                index = current.next;  
+                  
+                while(index){ 
+                	if(current.data > index.data){  
+                        temp = current.data;  
+                        current.data = index.data;  
+                        index.data = temp; 
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+            }
     }
 
     clear() {
-        // Delete all the elements from the list
+        this.root=null;
+        this.size=0;
+        console.log("Linked List is Cleared");
     }
 
-    contains() {
-        // To check if element exist
+    contains(value) {
+        let temp=this.root;
+        while(temp){
+        if(temp.data==value){
+        	console.log("Linked List contains "+value);
+            return;
+        }
+        temp=temp.next;
+        }
+        console.log("Linked List doesn't contain "+value);
     }
     
 }
@@ -91,8 +120,22 @@ ll.delete()
 ll.print()
 
 ll.add(3)
+ll.add(4)
+ll.add(2)
 ll.print()
 
 ind = 1 
 node = ll.elementAt( ind )
-console.log( "Element at index" , ind , ":" , node.data )       
+console.log( "Element at index" , ind , ":" , node.data ) 
+
+ll.contains(3)
+
+ll.reverse();
+console.log("After reversing element");
+ll.print();
+
+ll.sort();
+console.log("After sorting element");
+ll.print();
+
+ll.clear();
