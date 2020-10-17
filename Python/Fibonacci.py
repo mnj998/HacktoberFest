@@ -15,15 +15,15 @@ def fibUsingRecursion(n):
 
    if n<0: 
         print("Incorrect input") 
-    elif n==0: 
+   elif n==0: 
         return 0
-    elif n==1: 
+   elif n==1: 
         return 1
-    else: 
+   else: 
         return fibUsingRecursion(n-1)+fibUsingRecursion(n-2)
 n = int(input("How many numbers from fib series? : "))
 
 fibUsingLoop(n)
-fibUsingRecursion(n)
+print(fibUsingRecursion(n)) 
 
 
