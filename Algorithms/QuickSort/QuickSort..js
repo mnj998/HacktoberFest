@@ -32,14 +32,14 @@ function quickSort(items, left, right) {
     if (items.length > 1) {
         index = partition(items, left, right); //index returned from partition
         if (left < index - 1) { 
-            quickSort(items, right, index);
+            quickSort(items, left, index-1);
         }
         if (index < right) {
-            quickSort(items, index, left);
+            quickSort(items, index, right);
         }
     }
     return items;
 }
 // first call to quick sort
 var sortedArray = quickSort(items, 0, items.length - 1);
-console.log(sortedArray); // should print [2,3,5,6,7,9]
+console.log(sortedArray); //1,5,7,8,9,10
