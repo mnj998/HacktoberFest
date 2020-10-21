@@ -65,6 +65,7 @@ public:
     }
 
     void print() {
+        if(root){
         Node* temp = root;
         cout << "Values: " ;
         while( temp ) {
@@ -72,6 +73,10 @@ public:
             temp = temp->next;
         }
         cout << endl ;
+        }
+        else{
+            cout<<endl<<"EMPTY LIST";
+        }
     }
 
     // Test and Complete the following methods
@@ -91,15 +96,26 @@ public:
 
     }
 
-    void clear() {
-        // Delete all the elements from the list
-    }
-
-    bool contains( int value ) {
-        // To check if element exist
-    }
-
+    
     */
+    bool contains( int value ) {
+        Node* temp=root;
+        while(temp){
+            if(int(temp->data)==value){
+                cout<<endl<<"List contains "<<value<<endl;
+                return 0;
+            }
+            temp=temp->next;
+        }
+        cout<<endl<<"List doesn't contains "<<value<<endl;
+        return 1;
+    }
+
+    
+    void clear(){
+        root = NULL;
+        size = 0; 
+    }
         
 };
 
@@ -115,11 +131,15 @@ int main() {
     ll.print();
 
     ll.add(3);
+    ll.add(4);
     ll.print();
     
     int ind = 1 ;
     Node *node = ll.elementAt( ind );
     cout << "Element at index " << ind << ": " << node->data;
-
+    
+    ll.contains(8);
+     ll.clear();
+     ll.print();
     return 0;
 }
