@@ -4,7 +4,13 @@ void sum(int num1,int num2){
 }
 
 void swap(int num1,int num2){
-    //Complete this program to swap 2 numbers without using third (temp) variable and print here.
+  printf("num1 before swapping is %d\n", num1);
+  printf("num2 before swapping is %d\n",num2);
+  num1=num1+num2;
+  num2=num1-num2;
+  num1=num1-num2;
+   printf("num1 after swapping is %d\n",num1);
+    printf("num2 after swapping is %d\n",num2);
 }
 
 void isEqual(int num1,int num2){
