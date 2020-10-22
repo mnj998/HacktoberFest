@@ -22,8 +22,12 @@ void Devide(int num1,int num2){
 }
 
 HellowWorld(){
-    //print Hello World without using ';'
-}
+    
+    if (printf("Hello World")) { 
+
+    } 
+} 
+
 
 
 int main(){
