@@ -72,11 +72,22 @@ public class LinkedList {
 
     // Test and Complete the following methods
 
-    /*
+    
     void printReverse(){
+    System.out.print("\nreverse linked list::");
+    	int len=0;
+    	Node t;
+    	while(len<=size-1) {
+//    	if(this.elementAt(len) != null ) {
+    		t=this.elementAt(len);  
+    		System.out.print(t.data+" ");
+    		
+//    	}
+    	len++;}
     
     }
-
+    }
+/*
     void reverse() {
         // Reverse the content of the list
 
@@ -113,7 +124,11 @@ public class LinkedList {
         
         int ind = 1 ;
         Node node = ll.elementAt( ind );
-        System.out.println( "Element at index " + ind + ": " + node.data );        
+        System.out.println( "Element at index " + ind + ": " + node.data );       
+        
+        ll.add(4);
+        ll.print();
+        ll.printReverse();
 
     }
 
