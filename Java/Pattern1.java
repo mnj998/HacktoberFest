@@ -11,9 +11,10 @@
 // * * *          * * *
 // * * * *      * * * *
 // * * * * *  * * * * *
-import java.io.*; 
-  
-class GFG { 
+import java.io.*;
+import java.util.Scanner; 
+
+class pattern1 { 
       
     static void pattern(int n) 
     { 
@@ -63,6 +64,9 @@ class GFG {
     // main function 
     public static void main(String[] args) 
     { 
-        pattern(7); 
+        int n;
+        Scanner in=new Scanner(System.in);
+        n=in.nextInt();
+		pattern(n); 
     } 
 }
