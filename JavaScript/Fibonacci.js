@@ -10,7 +10,7 @@ function fibUsingLoop(n) {
     third = first + second;
   }
 }
-function fibUsingRecursion(num) {
+//function fibUsingRecursion(num) {
   if(num < 2) {
       return num;
   }
