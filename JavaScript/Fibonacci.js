@@ -21,7 +21,7 @@ function fibUsingRecursion(num) {
 
 let n = prompt("How many numbers from fib series? : ", 0);
 
-fibUsingLoop(n);
+
  console.log("using loop")
  fibUsingLoop(n);
 
