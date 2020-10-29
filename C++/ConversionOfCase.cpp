@@ -12,6 +12,7 @@ int main() {
 	// is a lowercase character or not 
 	// using if-else
 	
+
 	if (iswlower(rs1)) 
 		wcout << rs1 << " is a lowercase "; 
 	else
@@ -37,4 +38,5 @@ int main() {
 	wcout << endl; 
 
 	return 0; 
+
 }
