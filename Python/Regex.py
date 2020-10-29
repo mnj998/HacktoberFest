@@ -7,7 +7,11 @@ import re
   
 # Make a regular expression to accept string 
 # ending with alphanumeric character 
+
 regex = '[a-zA-z0-9]$'
+
+
+
       
 # Define a function for accepting string 
 # ending with alphanumeric character 
