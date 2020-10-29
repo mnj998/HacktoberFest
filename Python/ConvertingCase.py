@@ -1,6 +1,6 @@
 # Python3 code to demonstrate working of  
 # Convert Snake case to Pascal case 
-# Using title() + replace() 
+# Using title() +  
   
 # initializing string 
 test_str = 'geeksforgeeks_is_best'
