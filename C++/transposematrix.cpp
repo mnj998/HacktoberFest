@@ -27,7 +27,7 @@ int main() {
             transpose[j][i] = a[i][j];
         }
 
-    // Displaying the transpose of matrix a
+    //  Displaying the transpose of matrix a
     printf("\nTranspose of the matrix:\n");
     for (i = 0; i < c; ++i)
         for (j = 0; j < r; ++j) {
