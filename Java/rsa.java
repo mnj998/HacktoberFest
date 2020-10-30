@@ -33,11 +33,11 @@ public static void main(String[] args) {
 	    int p = 0,q=0,n,phi=0,e,d,ip1,ip2;
 		Scanner in= new Scanner(System.in);
 		Random r=new Random();
-		boolean flag=false;
+		boolean flag=true;
 		while(flag){
 			ip1=r.nextInt(100);
 			if((prime(ip1))==true){
-				p=ip1
+				p=ip1;
 				flag=false;
 				
 			}
@@ -46,13 +46,14 @@ public static void main(String[] args) {
 		while(flag){
 			ip2=r.nextInt(100);
 			if(((prime(ip2))==true)&&(p!=ip2)){
-				q=ip2
+				q=ip2;
 				flag=false;
 				
 			}
 		}
 		
 		System.out.println("p:"+p+" q:"+q);
+		n=p*q;
 		phi=(p-1)*(q-1);
 		for(e=2;e<phi;e++){
 			if(gcd(e,phi)==true){
@@ -62,7 +63,9 @@ public static void main(String[] args) {
 		}
 		System.out.println("n:"+n);
 		for(d=1;d<n;d++){
-			if(((e*d)%phi)==1)
+			if(((e*d)%phi)==1){
+				break;
+				}
 		}
 		System.out.println("phi:"+phi);
 		System.out.println("PUBLIC KEY:"+e+"\nPRIVATE KEY:"+d);
@@ -71,6 +74,7 @@ public static void main(String[] args) {
 		while(flag){
 			ip=r.nextInt(20);
 			if(ip<n&&ip!=0){
+				t=ip;
 				flag=false;
 				
 			}
